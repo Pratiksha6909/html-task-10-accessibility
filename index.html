@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Task 10 - Accessibility Features</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            line-height: 1.6;
+        }
+
+        nav a {
+            margin-right: 15px;
+            text-decoration: none;
+        }
+
+        nav a:focus,
+        button:focus,
+        input:focus,
+        select:focus {
+            outline: 3px solid #005fcc;
+        }
+
+        form {
+            max-width: 400px;
+            margin-top: 20px;
+        }
+
+        label {
+            display: block;
+            margin-top: 10px;
+        }
+
+        button {
+            margin-top: 15px;
+            padding: 8px 12px;
+        }
+    </style>
+</head>
+<body>
+
+<!-- Skip Navigation -->
+<a href="#mainContent">Skip to main content</a>
+
+<!-- Navigation -->
+<nav role="navigation" aria-label="Main Navigation">
+    <a href="#home">Home</a>
+    <a href="#form">Form</a>
+    <a href="#contact">Contact</a>
+</nav>
+
+<!-- Main Content -->
+<main id="mainContent" role="main">
+
+<section id="home">
+    <h1>Accessible Website</h1>
+    <p>This page demonstrates basic accessibility features.</p>
+</section>
+
+<!-- Accessible Form -->
+<section id="form">
+    <h2>Registration Form</h2>
+
+    <form>
+        <label for="name">Name:</label>
+        <input type="text" id="name" name="name" required aria-required="true">
+
+        <label for="email">Email:</label>
+        <input type="email" id="email" name="email" required aria-required="true">
+
+        <label for="country">Country:</label>
+        <select id="country" name="country">
+            <option>India</option>
+            <option>USA</option>
+            <option>UK</option>
+        </select>
+
+        <button type="submit">Submit</button>
+    </form>
+</section>
+
+</main>
+
+<!-- Footer -->
+<footer role="contentinfo">
+    <p>© 2026 Accessibility Task</p>
+</footer>
+
+</body>
+</html>
